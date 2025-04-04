@@ -1,0 +1,41 @@
+name: CI
+
+env:
+  DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+
+on:
+  push:
+    branches: main
+    paths-ignore: ["**/*.md", "**/*.mdx"]
+  pull_request:
+    branches: main
+    paths-ignore: ["**/*.md", "**/*.mdx"]
+
+jobs:
+  format:
+    name: Biome
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4.1.0
+        with:
+          version: 8
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+      
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Check for lint and formatting errors with Biome
+        run: pnpm run check
+
+      - name: Build site
+        run: pnpm run build
