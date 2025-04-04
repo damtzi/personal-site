@@ -1,9 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+import Breadcrumbs from '~/components/shared/breadcrumbs.astro';
 import BaseLayout from '~/layouts/base-layout.astro';
 import type { CollectionsResponse } from '~/lib/types';
-import Breadcrumbs from '~/components/shared/breadcrumbs.astro';
 import { slugify } from '~/lib/utils';
-import { Image } from 'astro:assets';
 
 export const getStaticPaths = async () => {
     const response = await fetch(

@@ -8,8 +8,8 @@
         "preview": "astro preview",
         "astro": "astro",
         "format": "biome format --write .",
-        "lint": "biome lint --write ./src/**/*.{ts,tsx,js,jsx,json,css,md,astro}",
-        "check": "biome check ./src/**/*.{ts,tsx,js,jsx,json,css,md,astro}"
+        "lint": "biome lint --write .",
+        "check": "biome check ."
     },
     "dependencies": {
         "@astrojs/mdx": "^4.0.8",
