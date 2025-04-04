@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { animate } from 'motion';
 import { motion } from 'motion/react';
+import { useEffect, useState } from 'react';
 
 export const ThemeToggle = () => {
     const [theme, setThemeState] = useState<'light' | 'dark' | 'system'>(
@@ -28,13 +28,14 @@ export const ThemeToggle = () => {
         const sun = document.getElementById('sunIcon');
 
         animate([
-            [moon!, { y: 32 }],
-            [sun!, { y: -32 }, { at: '+0.5' }]
+            [moon, { y: 32 }],
+            [sun, { y: -32 }, { at: '+0.5' }]
         ]);
     };
 
     return (
         <button
+            type="button"
             onClick={onClick}
             aria-label="Toggle Theme"
             className="hover:cursor-pointer"

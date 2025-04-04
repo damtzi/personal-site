@@ -2,7 +2,6 @@ export function slugify(str: string): string {
     return str
         .toLowerCase()
         .normalize('NFD') // Normalize special characters
-        .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
         .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
         .trim()
         .replace(/\s+/g, '-') // Replace spaces with hyphens
