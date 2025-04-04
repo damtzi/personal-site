@@ -76,4 +76,4 @@ export type ReleaseResponse = {
     styles: string[];
     images: Image[];
     thumb: string;
-}
+};
