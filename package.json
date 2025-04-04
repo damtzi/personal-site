@@ -1,14 +1,39 @@
 {
-  "name": "personal-site",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.6.1"
-  }
+    "name": "personal-site",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+        "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\""
+    },
+    "dependencies": {
+        "@astrojs/mdx": "^4.0.8",
+        "@astrojs/react": "^4.2.0",
+        "@astrojs/tailwind": "^6.0.0",
+        "@fontsource-variable/hanken-grotesk": "^5.1.1",
+        "@fontsource-variable/lexend": "^5.1.2",
+        "@fontsource-variable/playfair-display": "^5.1.1",
+        "@fontsource/lato": "^5.1.1",
+        "@tailwindcss/vite": "^4.0.4",
+        "@types/react": "^19.0.8",
+        "@types/react-dom": "^19.0.3",
+        "astro": "^5.6.1",
+        "lucide-astro": "^0.473.0",
+        "lucide-react": "^0.475.0",
+        "motion": "^12.4.2",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "sharp": "^0.33.5",
+        "tailwindcss": "^4.0.4"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.16",
+        "prettier": "^3.4.2",
+        "prettier-plugin-astro": "^0.14.1",
+        "typescript": "^5.7.3"
+    }
 }

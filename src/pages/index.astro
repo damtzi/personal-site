@@ -1,11 +1,19 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '~/layouts/base-layout.astro';
+import Link from '~/components/shared/link.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="damitzi">
+    <div class="flex flex-col gap-4">
+        <h1 class="text-4xl font-playfair">Hello there</h1>
+        <p class="">
+            I work as a web developer at <Link
+                url="https://secretarium.com/"
+                title="Secretarium"
+            />. I specialise in building and maintaining user interfaces for
+            websites and web applications. In my spare time I'm watching the
+            NBA, listening to <Link url="/music" title="music" internal />, and
+            baking <Link url="/bread" title="bread" internal />.
+        </p>
+    </div>
+</BaseLayout>

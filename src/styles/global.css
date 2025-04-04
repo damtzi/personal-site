@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+    --color-pantone-blue: #0f4c81;
+    --color-off-white: #f2f0ef;
+    --color-pure-blue: #0007fb;
+
+    --font-playfair: 'Playfair Display Variable', 'sans-serif';
+    --font-lexend: 'Lexend Variable', 'sans-serif';
+    --font-lato: 'Lato', 'sans-serif';
+    --font-hanken-grotesk: 'Hanken Grotesk Variable', 'sans-serif';
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
+
+/* @font-face {
+    font-family: 'Magiel';
+    src: url('/fonts/Magiel-Black/Magiel-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */
