@@ -1,9 +1,9 @@
 ---
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import Layout from '~/layouts/base-layout.astro';
-import Breadcrumbs from '~/components/shared/breadcrumbs.astro';
 import Prose from '~/components/prose.astro';
+import Breadcrumbs from '~/components/shared/breadcrumbs.astro';
+import Layout from '~/layouts/base-layout.astro';
 
 export interface Props {
     recipe: CollectionEntry<'recipes'>;

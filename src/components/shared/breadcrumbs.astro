@@ -3,7 +3,7 @@ const currentPath = Astro.url.pathname;
 const segments = currentPath.split('/').filter((segment) => segment !== '');
 
 const breadcrumbPaths = segments.map((segment, index) => {
-    const href = '/' + segments.slice(0, index + 1).join('/');
+    const href = `/${segments.slice(0, index + 1).join('/')}`;
 
     return {
         name: segment,

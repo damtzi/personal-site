@@ -1,0 +1,16 @@
+{
+    "language_servers": [
+        "biome",
+        "tailwindcss-language-server",
+        "astro-language-server"
+    ],
+    "formatter": {
+        "language_server": {
+            "name": "biome"
+        }
+    },
+    "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+    }
+}
