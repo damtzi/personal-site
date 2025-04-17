@@ -1,14 +1,12 @@
 {
     "language_servers": [
         "biome",
+        "vtsls",
+        "astro-language-server",
         "tailwindcss-language-server",
-        "astro-language-server"
+        "!eslint"
     ],
-    "formatter": {
-        "language_server": {
-            "name": "biome"
-        }
-    },
+    "formatter": "language_server",
     "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true
