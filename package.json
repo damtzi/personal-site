@@ -9,7 +9,9 @@
         "astro": "astro",
         "format": "biome format --write .",
         "lint": "biome lint --write .",
-        "check": "biome check ."
+        "check": "biome check .",
+        "prepare": "husky",
+        "lint-staged": "lint-staged"
     },
     "dependencies": {
         "@astrojs/mdx": "^4.0.8",
@@ -33,9 +35,18 @@
     },
     "devDependencies": {
         "@biomejs/biome": "1.9.4",
+        "@commitlint/cli": "^19.8.0",
+        "@commitlint/config-conventional": "^19.8.0",
         "@tailwindcss/typography": "^0.5.16",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.5.1",
         "prettier": "^3.4.2",
         "prettier-plugin-astro": "^0.14.1",
         "typescript": "^5.7.3"
+    },
+    "lint-staged": {
+        "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+            "biome check --write --no-errors-on-unmatched"
+        ]
     }
 }
